@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login(val1: any, val2: any) {
+    //getting value using #email and #password from view
     console.log(val1.value, val2.value);
     // this.apiSvc
     //   .authenticate('chandansutradhar2@gmail.com', 'Passw0rd')
