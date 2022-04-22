@@ -1,1 +1,52 @@
-<p>signup works!</p>
+<div class="container">
+    <div class="form-container">
+        <form class="form" [formGroup]="frmGroup">
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+                <mat-icon matSuffix>account_circle</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName">
+                <mat-icon matSuffix>person_filled</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+                <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password">
+                <mat-icon matSuffix>visibility</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" formControlName="confirmPassword">
+                <mat-icon matSuffix>visibility</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Mobile No</mat-label>
+                <input matInput type="number" formControlName="mobileNo">
+                <mat-icon matSuffix>call</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>User Type</mat-label>
+                <mat-select formControlName="userType">
+                    <mat-option [value]="'Customer'">
+                        Customer
+                    </mat-option>
+                    <mat-option [value]="'Seller'">
+                        Seller
+                    </mat-option>
+                    <mat-option [value]="'Vendor'">
+                        Vendor
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button style="width: 100%;" color="accent" (click)="createAccount()">CREATE
+            ACCOUNT</button>
+    </div>
+</div>

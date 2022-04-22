@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 70%;
+  width: 100vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  width: 50em;
+}
