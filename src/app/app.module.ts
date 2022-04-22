@@ -16,6 +16,9 @@ import { IconBarComponent } from './layouts/header/icon-bar/icon-bar.component';
 import { NavbarComponent } from './layouts/header/navbar/navbar.component';
 import { LoginComponent } from './auth/login/login.component';
 import { BeautyComponent } from './beauty/beauty.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { SocialSigninComponent } from './auth/social-signin/social-signin.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +31,17 @@ import { BeautyComponent } from './beauty/beauty.component';
     IconBarComponent,
     LoginComponent,
     BeautyComponent,
+    SignupComponent,
+    ResetPasswordComponent,
+    SocialSigninComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, UiModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    UiModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
