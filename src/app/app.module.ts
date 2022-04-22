@@ -7,20 +7,22 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { ContainerComponent } from './layouts/container/container.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchBarComponent } from './layouts/header/search-bar/search-bar.component';
+import { IconBarComponent } from './layouts/header/icon-bar/icon-bar.component';
+import { NavbarComponent } from './layouts/header/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    NavbarComponent,
+    SearchBarComponent,
+    IconBarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
