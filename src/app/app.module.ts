@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './layouts/header/search-bar/search-bar.component';
 import { IconBarComponent } from './layouts/header/icon-bar/icon-bar.component';
 import { NavbarComponent } from './layouts/header/navbar/navbar.component';
+import { LoginComponent } from './auth/login/login.component';
+import { BeautyComponent } from './beauty/beauty.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { NavbarComponent } from './layouts/header/navbar/navbar.component';
     NavbarComponent,
     SearchBarComponent,
     IconBarComponent,
+    LoginComponent,
+    BeautyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, UiModule],
   providers: [],
