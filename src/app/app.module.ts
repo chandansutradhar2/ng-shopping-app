@@ -41,6 +41,7 @@ import { SocialSigninComponent } from './auth/social-signin/social-signin.compon
     AppRoutingModule,
     BrowserAnimationsModule,
     UiModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

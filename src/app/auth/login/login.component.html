@@ -1,17 +1,17 @@
 <div class="container">
     <div class="form-container">
-        <form class="form">
+        <div class="form">
             <mat-form-field appearance="outline">
                 <mat-label>Enter Email</mat-label>
-                <input #email matInput>
+                <input [(ngModel)]="email" matInput>
                 <mat-icon matPrefix>alternate_email</mat-icon>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Enter Password</mat-label>
-                <input #password matInput type="password">
+                <input [(ngModel)]="password" matInput type="password">
                 <mat-icon matSuffix>visibility</mat-icon>
             </mat-form-field>
-        </form>
-        <button mat-raised-button style="width: 100%;" color="primary" (click)="login(email,password)">Login</button>
+        </div>
+        <button mat-raised-button style="width: 100%;" color="primary" (click)="login()">Login</button>
     </div>
 </div>

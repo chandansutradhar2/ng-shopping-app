@@ -7,13 +7,16 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  email!: string;
+  password!: string;
   constructor(private apiSvc: ApiService) {}
 
   ngOnInit(): void {}
 
-  login(val1: any, val2: any) {
+  login() {
     //getting value using #email and #password from view
-    console.log(val1.value, val2.value);
+    console.log(this.email, this.password);
+
     // this.apiSvc
     //   .authenticate('chandansutradhar2@gmail.com', 'Passw0rd')
     //   .then(() => {
