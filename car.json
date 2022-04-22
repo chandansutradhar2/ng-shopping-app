@@ -1,0 +1,52 @@
+{
+  "name": "ertiga",
+  "description": "some desc",
+  "versions": [
+    {
+      "name": "VXI",
+      "milage": 17,
+      "engineSpec": {
+        "bhp": 75,
+        "torque": 120,
+        "twinSpark": false
+      },
+      "price": 76000
+    },
+    {
+      "name": "ZXI",
+      "milage": 14,
+      "price": 876000,
+      "engineSpec": {
+        "bhp": 175,
+        "torque": 220,
+        "twinSpark": true
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "rating": 5,
+      "title": "Nice MUV",
+      "body": "",
+      "createdOn": "",
+      "likes": 3,
+      "dislikes": 2
+    },
+    {
+      "rating": 5,
+      "title": "Bad Car",
+      "body": "",
+      "createdOn": "",
+      "likes": 3,
+      "dislikes": 2
+    },
+    {
+      "rating": 5,
+      "title": "MUV",
+      "body": "",
+      "createdOn": "",
+      "likes": 3,
+      "dislikes": 2
+    }
+  ]
+}
