@@ -5,7 +5,9 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from 'src/app/models/user.model';
+import { ApiService } from 'src/app/services/api.service';
 import { AsyncEmailValidator } from 'src/app/validators/email.validator';
 
 @Component({
@@ -18,8 +20,10 @@ export class SignupComponent implements OnInit {
   frmGroup: FormGroup;
 
   constructor(
+    private apiSvc: ApiService,
     private fb: FormBuilder,
-    private emailCheckValidator: AsyncEmailValidator
+    private emailCheckValidator: AsyncEmailValidator,
+    private snackbar: MatSnackBar
   ) {
     this.frmGroup = fb.group({
       firstName: ['', [Validators.required, Validators.pattern(/^[A-Za-z]+$/)]],
@@ -50,11 +54,23 @@ export class SignupComponent implements OnInit {
   createAccount() {
     debugger;
     if (this.frmGroup.invalid) {
+      this.frmGroup.markAllAsTouched();
       return;
     }
 
     let user: User = this.frmGroup.value;
-
+    this.apiSvc
+      .createUser(user)
+      .then((res) => {
+        this.snackbar.open('Account created succesfully', 'ok', {
+          duration: 10000,
+        });
+      })
+      .catch((err) => {
+        this.snackbar.open(err, 'retry', {
+          duration: 15000,
+        });
+      });
     console.log(user);
   }
 }

@@ -27,7 +27,7 @@ export class ApiService {
 
   createUser(user: User) {
     return new Promise((resolve, reject) => {
-      this.http.post('', user).subscribe(
+      this.http.post('http://localhost:3000/api/user/signup', user).subscribe(
         (res) => {
           resolve(res);
         },
