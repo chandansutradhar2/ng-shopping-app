@@ -5,6 +5,10 @@
                 <mat-label>First Name</mat-label>
                 <input matInput formControlName="firstName">
                 <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-error *ngIf="frmGroup.get('firstName')?.errors?.['required']">First name cannot be left blank
+                </mat-error>
+                <mat-error *ngIf="frmGroup.get('firstName')?.errors?.['pattern']">First Name must only be alphabets
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Last Name</mat-label>
@@ -15,6 +19,12 @@
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email">
                 <mat-icon matSuffix>alternate_email</mat-icon>
+                <mat-error *ngIf="form['email'].touched && form['email'].errors?.['emailExists']">
+                    Email Already exists with us. Please try to login</mat-error>
+                <mat-error *ngIf="form['email'].touched && form['email'].errors?.['required']">
+                    Email is required</mat-error>
+                <mat-error *ngIf="form['email']?.touched && form['email']?.errors?.['email']">
+                    Incorrect Email Format</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Password</mat-label>
