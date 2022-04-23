@@ -47,6 +47,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const AllMaterialModules = [
   MatAutocompleteModule,
@@ -85,11 +86,13 @@ const AllMaterialModules = [
   MatPaginatorModule,
   MatSortModule,
   MatTableModule,
+  BrowserAnimationsModule,
+  CommonModule,
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, AllMaterialModules],
+  imports: [AllMaterialModules],
   exports: [AllMaterialModules],
 })
 export class UiModule {}
