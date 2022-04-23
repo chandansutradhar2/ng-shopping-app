@@ -27,11 +27,11 @@ export class LoginComponent implements OnInit {
     //getting value using #email and #password from view
     console.log(this.email.value, this.password.value);
 
-    // this.apiSvc
-    //   .authenticate('chandansutradhar2@gmail.com', 'Passw0rd')
-    //   .then(() => {
-    //     alert('login success');
-    //   })
-    //   .catch(() => alert('login failed'));
+    this.apiSvc
+      .authenticate(this.email.value, this.password.value)
+      .then(() => {
+        alert('login success');
+      })
+      .catch(() => alert('login failed'));
   }
 }

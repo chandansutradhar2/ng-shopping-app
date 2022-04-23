@@ -56,7 +56,8 @@
                 </mat-select>
             </mat-form-field>
         </form>
-        <button mat-raised-button style="width: 100%;" color="accent" (click)="createAccount()">CREATE
+        <button mat-raised-button style="width: 100%;" color="accent" [disabled]="frmGroup.invalid"
+            (click)="createAccount()">CREATE
             ACCOUNT</button>
     </div>
 </div>

@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
 import { ApiService } from 'src/app/services/api.service';
 import { AsyncEmailValidator } from 'src/app/validators/email.validator';
@@ -23,6 +24,7 @@ export class SignupComponent implements OnInit {
     private apiSvc: ApiService,
     private fb: FormBuilder,
     private emailCheckValidator: AsyncEmailValidator,
+    private router: Router,
     private snackbar: MatSnackBar
   ) {
     this.frmGroup = fb.group({
@@ -52,7 +54,6 @@ export class SignupComponent implements OnInit {
   }
 
   createAccount() {
-    debugger;
     if (this.frmGroup.invalid) {
       this.frmGroup.markAllAsTouched();
       return;
@@ -65,6 +66,9 @@ export class SignupComponent implements OnInit {
         this.snackbar.open('Account created succesfully', 'ok', {
           duration: 10000,
         });
+
+        //code to redirect..
+        this.router.navigate(['']);
       })
       .catch((err) => {
         this.snackbar.open(err, 'retry', {
