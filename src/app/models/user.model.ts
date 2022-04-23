@@ -8,6 +8,7 @@ export interface User {
   searchHistories?: string[];
   addresses: any[];
   userType: USER_TYPE;
+  createdOn?: number;
 }
 
 export enum USER_TYPE {

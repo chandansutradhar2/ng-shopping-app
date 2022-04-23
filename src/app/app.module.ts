@@ -15,6 +15,7 @@ import { SearchBarComponent } from './layouts/header/search-bar/search-bar.compo
 import { IconBarComponent } from './layouts/header/icon-bar/icon-bar.component';
 import { NavbarComponent } from './layouts/header/navbar/navbar.component';
 import { BeautyComponent } from './beauty/beauty.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { BeautyComponent } from './beauty/beauty.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     UiModule,

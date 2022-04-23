@@ -86,8 +86,6 @@ const AllMaterialModules = [
   MatPaginatorModule,
   MatSortModule,
   MatTableModule,
-  BrowserAnimationsModule,
-  CommonModule,
 ];
 
 @NgModule({
